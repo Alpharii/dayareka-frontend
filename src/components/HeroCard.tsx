@@ -3,15 +3,17 @@ import Image from "next/image";
 
 export default function HeroCard() {
   return (
-    <div className="relative w-full text-white p-6 rounded-lg overflow-hidden">
-      {/* Background Image */}
-      <Image
-        src="/hero.png"
-        alt="Hero Background"
-        layout="fill"
-        objectFit="cover"
-        className="absolute inset-0 z-0"
-      />
+    <div className="relative w-full text-white p-6 rounded-lg overflow-hidden h-52">
+      {/* Background Image with Smaller Height */}
+      <div className="absolute inset-0 z-0 h-full">
+        <Image
+          src="/hero.png"
+          alt="Hero Background"
+          layout="fill"
+          objectFit="cover"
+          className="rounded-lg"
+        />
+      </div>
 
       {/* Content */}
       <div className="relative z-10">
@@ -43,9 +45,9 @@ export default function HeroCard() {
             />
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={22} />
             <div className="absolute right-0 top-0 h-full bg-blue-white text-white px-6 rounded-r-lg text-lg font-medium">
-                <button className="relative p-2 px-5 mt-1 bg-blue-700 rounded-lg -mr-4 border-blue-700 border">
-                    Search
-                </button>
+              <button className="relative p-2 px-5 mt-1 bg-blue-700 rounded-lg -mr-4 border-blue-700 border">
+                Search
+              </button>
             </div>
           </div>
 

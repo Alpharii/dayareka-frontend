@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Header from "@/components/Header";
+import AnalyticsCard from "@/components/AnalyticsCard";
+import Layout from "@/components/Layout";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -13,152 +16,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="text-black
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
+      <body className="text-black bg-white
       ">
-        {children}
+      <Layout>
+        <Header />
+        <div className="flex w-full">
+          <div className="w-3/4">
+            {children}
+          </div>
+          <AnalyticsCard />
+        </div>
+      </Layout>
       </body>
     </html>
   );
